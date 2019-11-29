@@ -1,6 +1,6 @@
 
 # Spotify and SignalR WPF
-This project is a WPF application which interacts with Spotify and SignalR. It can play/pause songs, view and select playlists and play tracks within playlists.
+This project is a MVVM WPF application which interacts with Spotify and SignalR. It can play/pause songs, view and select playlists and play tracks within playlists.
 
 The API comes with Swagger. Start the project and access URL:PORT or URL:PORT/index.html in order to see the Swagger documentation.
 
@@ -35,7 +35,7 @@ Press GET TOKEN. For ease, just check all the check boxes. The token is valid fo
 ![Code Architecture](https://i.imgur.com/VZYSeqK.png)
 
 ## INotifyPropertyChanged
-To simply and reduce boilerplate code the use Fody's Nuget package (PropertyChanged.Fody) has been decided to handle the triggering of the PropertyChanged event upon property change.
+To simplify and reduce boilerplate code the use Fody's Nuget package (PropertyChanged.Fody) has been decided to handle the triggering of the PropertyChanged event upon property change.
 The package changes the auto-properties into properties with a setter which calls the PropertyChanged. This change is done at compile time automatically. The change only happens in classes which inherits and implements the interface *"INotifyPropertyChanged"*
 See more at the Github repository [Fody/PropertyChanged](https://github.com/Fody/PropertyChanged#readme)
 
